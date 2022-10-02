@@ -4,8 +4,15 @@
     "declaration": true,
     "outDir": "./build",
     "rootDir": "./lib",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "target": "ES2015",
+    "moduleResolution": "Node"
   },
-  "include": ["lib/**/*"],
-  "exclude": ["lib/**/*.spec.ts", "lib/**/*.test.ts"]
+  "include": [
+    "lib/**/*"
+  ],
+  "exclude": [
+    "lib/**/*.spec.ts",
+    "lib/**/*.test.ts"
+  ]
 }
