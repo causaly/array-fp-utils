@@ -16,7 +16,6 @@
     "url": "git://github.com/causaly/array-fp-utils.git"
   },
   "license": "MIT",
-  "private": true,
   "sideEffects": false,
   "types": "./build/index.d.ts",
   "main": "./build/node/cjs/index.js",
