@@ -1,4 +1,4 @@
-import { identity, pipe } from 'fp-ts/lib/function';
+import { pipe } from 'fp-ts/lib/function';
 
 import { intersectWith } from './intersectWith';
 
