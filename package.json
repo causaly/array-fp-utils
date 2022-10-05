@@ -11,6 +11,18 @@
     "email": "front-end@causaly.com",
     "url": "https://www.causaly.com"
   },
+  "contributors": [
+    {
+      "name": "Dimitrios C. Michalakos",
+      "email": "dimitris@jmike.gr",
+      "url": "https://github.com/jmike"
+    },
+    {
+      "name": "Nikolaos Tsompanidis",
+      "email": "nikostsompanides@gmail.com",
+      "url": "https://github.com/NikosTsompanides"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/causaly/array-fp-utils.git"
