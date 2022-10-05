@@ -1,8 +1,7 @@
-export function intersect<ValueType>(
-  arr: Array<ValueType>,
-  otherArr: Array<ValueType>
-): Array<ValueType> {
-  const set = new Set(otherArr);
+export const intersect =
+  (otherArr: Array<unknown>) =>
+  <ValueType>(arr: Array<ValueType>): Array<ValueType> => {
+    const set = new Set(otherArr);
 
-  return arr.filter((item) => set.has(item));
-}
+    return arr.filter((item) => set.has(item));
+  };
