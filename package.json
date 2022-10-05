@@ -1,6 +1,6 @@
 {
   "name": "array-fp-utils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Array utilities for functional programming in TypeScript",
   "author": "Causaly Team <front-end@causaly.com>",
   "license": "UNLICENSED",
