@@ -1,9 +1,21 @@
 {
   "name": "array-fp-utils",
   "version": "0.1.0",
-  "description": "Array utilities for functional programming in TypeScript",
-  "author": "Causaly Team <front-end@causaly.com>",
-  "license": "UNLICENSED",
+  "description": "Array utilities for functional programming in TypeScript.",
+  "keywords": [
+    "fp-ts",
+    "array"
+  ],
+  "author": {
+    "name": "Causaly Team",
+    "email": "front-end@causaly.com",
+    "url": "https://www.causaly.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/causaly/array-fp-utils.git"
+  },
+  "license": "MIT",
   "private": true,
   "sideEffects": false,
   "types": "./build/index.d.ts",
