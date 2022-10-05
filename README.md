@@ -179,7 +179,7 @@ const countries = [
 const uniqueArray = pipe(countries, unique);
 ```
 
-#### <a name="uniqueBy" href="uniqueBy">#</a>uniqueBy
+### <a name="uniqueBy" href="uniqueBy">#</a>uniqueBy
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
