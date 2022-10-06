@@ -31,7 +31,7 @@ npm install array-fp-utils
 - [unique](#unique)
 - [uniqueBy](#uniqueBy)
 
-### <a name="groupBy" href="groupBy">#</a>groupBy
+### <a id="groupBy"></a>groupBy
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -79,7 +79,7 @@ const groupedArr = pipe(
 // ]
 ```
 
-### <a name="intersect" href="intersect">#</a>intersect
+### <a id="intersect"></a>intersect
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -92,7 +92,7 @@ const otherArr = ['b', 'c', 'f'];
 const intersection = pipe(arr, intersect(otherArr)); // returns ['b', 'c']
 ```
 
-### <a name="intersectWith" href="intersectWith">#</a>intersectWith
+### <a id="intersectWith"></a>intersectWith
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -117,7 +117,7 @@ const arr = pipe(
 // arr = [{ foo: 'b' }, { foo: 'c' }]
 ```
 
-### <a name="isDistinctArray" href="isDistinctArray">#</a>isDistinctArray
+### <a id="isDistinctArray"></a>isDistinctArray
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -127,7 +127,7 @@ pipe([1, 2, 3], isDistinctArray); // returns true
 pipe([1, 1, 2, 3], isDistinctArray); // returns false
 ```
 
-### <a name="isSubsetOf" href="isSubsetOf">#</a>isSubsetOf
+### <a id="isSubsetOf"></a>isSubsetOf
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -139,7 +139,7 @@ const isSubset = pipe(['b', 'd'], isSubsetOf(arr)); // returns true
 const isSubset = pipe(['a', 'e'], isSubsetOf(arr)); // returns false
 ```
 
-### <a name="isSubsetOfWith" href="isSubsetOfWith">#</a>isSubsetOfWith
+### <a id="isSubsetOfWith"></a>isSubsetOfWith
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -160,7 +160,7 @@ const isSubset = pipe(
 ); // returns false since "f" does not exist in arr
 ```
 
-### <a name="unique" href="unique">#</a>unique
+### <a id="unique"></a>unique
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -179,7 +179,7 @@ const countries = [
 const uniqueArray = pipe(countries, unique);
 ```
 
-### <a name="uniqueBy" href="uniqueBy">#</a>uniqueBy
+### <a id="uniqueBy"></a>uniqueBy
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
