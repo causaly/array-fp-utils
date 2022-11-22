@@ -1,6 +1,6 @@
 export const isSubsetOf =
-  <ValueType>(otherArr: Array<ValueType>) =>
-  (arr: Array<ValueType>): boolean => {
+  <ValueType>(otherArr: Readonly<Array<ValueType>>) =>
+  (arr: Readonly<Array<ValueType>>): boolean => {
     const set = new Set(otherArr);
     return arr.every((item) => set.has(item));
   };

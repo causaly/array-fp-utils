@@ -5,7 +5,7 @@ export const uniqueBy =
       prevValue
     ) => prevValue
   ) =>
-  (arr: Array<ValueType>): Array<ValueType> => {
+  (arr: Readonly<Array<ValueType>>): Array<ValueType> => {
     const map = arr.reduce((acc, value) => {
       const key = getUniqueKey(value);
       const existingValue = acc.get(key);
