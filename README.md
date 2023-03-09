@@ -22,16 +22,17 @@ npm install array-fp-utils
 
 ## API
 
-- [groupBy](#groupBy)
+- [groupBy](#groupby)
 - [intersect](#intersect)
-- [intersectWith](#intersectWith)
-- [isDistinctArray](#isDistinctArray)
-- [isSubsetOf](#isSubsetOf)
-- [isSubsetOfWith](#isSubsetOfWith)
+- [intersectWith](#intersectwith)
+- [isDistinctArray](#isdistinctarray)
+- [isEqualSet](#isequalset)
+- [isSubsetOf](#issubsetof)
+- [isSubsetOfWith](#issubsetofwith)
 - [unique](#unique)
-- [uniqueBy](#uniqueBy)
+- [uniqueBy](#uniqueby)
 
-### <a id="groupBy"></a>groupBy
+### groupBy
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -79,7 +80,7 @@ const groupedArr = pipe(
 // ]
 ```
 
-### <a id="intersect"></a>intersect
+### intersect
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -92,7 +93,7 @@ const otherArr = ['b', 'c', 'f'];
 const intersection = pipe(arr, intersect(otherArr)); // returns ['b', 'c']
 ```
 
-### <a id="intersectWith"></a>intersectWith
+### intersectWith
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -117,7 +118,7 @@ const arr = pipe(
 // arr = [{ foo: 'b' }, { foo: 'c' }]
 ```
 
-### <a id="isDistinctArray"></a>isDistinctArray
+### isDistinctArray
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -127,7 +128,25 @@ pipe([1, 2, 3], isDistinctArray); // returns true
 pipe([1, 1, 2, 3], isDistinctArray); // returns false
 ```
 
-### <a id="isSubsetOf"></a>isSubsetOf
+### isEqualSet
+
+Indicates whether an array contains the same set of items with another array, irrelevant of position (sorting) or repetition (duplicate items).
+
+Note: only accepts arrays of [primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) values.
+
+#### Example
+
+```typescript
+import { pipe } from 'fp-ts/lib/function';
+import { isEqualSet } from 'array-fp-utils';
+
+pipe([1, 2, 3], isEqualSet([3, 3, 3, 2, 2, 1])); // returns true
+
+pipe([1, 2], isEqualSet([1, 2, 3])); // returns false
+pipe([1, 2, 3], isEqualSet([1, 2, 4])); // returns false
+```
+
+### isSubsetOf
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -139,7 +158,7 @@ const isSubset = pipe(['b', 'd'], isSubsetOf(arr)); // returns true
 const isSubset = pipe(['a', 'e'], isSubsetOf(arr)); // returns false
 ```
 
-### <a id="isSubsetOfWith"></a>isSubsetOfWith
+### isSubsetOfWith
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -160,7 +179,7 @@ const isSubset = pipe(
 ); // returns false since "f" does not exist in arr
 ```
 
-### <a id="unique"></a>unique
+### unique
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
@@ -179,7 +198,7 @@ const countries = [
 const uniqueArray = pipe(countries, unique);
 ```
 
-### <a id="uniqueBy"></a>uniqueBy
+### uniqueBy
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
