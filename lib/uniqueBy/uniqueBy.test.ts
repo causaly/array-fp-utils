@@ -66,7 +66,7 @@ const mockData = [
 ];
 
 describe('uniqueBy()', () => {
-  it('returns unique values by key, dropping duplicate value', () => {
+  it('returns unique values by key, dropping duplicate values', () => {
     const expected = pipe(
       mockData,
       uniqueBy((item) => item.country)
