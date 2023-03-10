@@ -1,12 +1,12 @@
 import { pipe } from 'fp-ts/lib/function';
 
-import { isSameValueSetBy } from './isSameValueSetBy';
+import { isSameValueSetWith } from './isSameValueSetWith';
 
-describe('isSameValueSetBy()', () => {
+describe('isSameValueSetWith()', () => {
   it('returns true when the specified array is a exactly the same as the other array', () => {
     const expected = pipe(
       [{ key: 'a' }, { key: 'b' }, { key: 'c' }],
-      isSameValueSetBy(
+      isSameValueSetWith(
         ['a', 'b', 'c'],
         (value, otherValue) => value.key === otherValue
       )
@@ -17,7 +17,7 @@ describe('isSameValueSetBy()', () => {
   it('ignores sorting', () => {
     const expected = pipe(
       [{ key: 'a' }, { key: 'b' }, { key: 'c' }],
-      isSameValueSetBy(
+      isSameValueSetWith(
         ['c', 'b', 'a'],
         (value, otherValue) => value.key === otherValue
       )
@@ -28,7 +28,7 @@ describe('isSameValueSetBy()', () => {
   it('returns false on duplicate values', () => {
     const expected = pipe(
       [{ key: 'a' }, { key: 'b' }, { key: 'c' }],
-      isSameValueSetBy(
+      isSameValueSetWith(
         ['c', 'b', 'a', 'a'],
         (value, otherValue) => value.key === otherValue
       )
@@ -39,7 +39,7 @@ describe('isSameValueSetBy()', () => {
   it('returns false when the specified array is different from the other array', () => {
     const expected = pipe(
       [{ key: 'a' }, { key: 'b' }, { key: 'c' }],
-      isSameValueSetBy(
+      isSameValueSetWith(
         ['a', 'b', 'd'],
         (value, otherValue) => value.key === otherValue
       )
@@ -50,7 +50,7 @@ describe('isSameValueSetBy()', () => {
   it('returns false when the specified array is a subset of the other array', () => {
     const expected = pipe(
       [{ key: 'a' }, { key: 'b' }],
-      isSameValueSetBy(
+      isSameValueSetWith(
         ['a', 'b', 'c'],
         (value, otherValue) => value.key === otherValue
       )

@@ -1,4 +1,4 @@
-export const isSameValueSetBy =
+export const isSameValueSetWith =
   <ValueType, OtherValueType>(
     otherArr: Readonly<Array<OtherValueType>>,
     isEqual: (value: ValueType, otherValue: OtherValueType) => boolean

@@ -27,7 +27,7 @@ npm install array-fp-utils
 - [intersectWith](#intersectwith)
 - [isDistinctArray](#isdistinctarray)
 - [isSameValueSet](#issamevalueset)
-- [isSameValueSetBy](#issamevaluesetby)
+- [isSameValueSetWith](#issamevaluesetith)
 - [isSubsetOf](#issubsetof)
 - [isSubsetOfWith](#issubsetofwith)
 - [unique](#unique)
@@ -147,7 +147,7 @@ pipe([1, 2], isSameValueSet([1, 2, 3])); // returns false
 pipe([1, 2, 3], isSameValueSet([1, 2, 4])); // returns false
 ```
 
-### isSameValueSetBy
+### isSameValueSetWith
 
 Indicates whether an array contains the same set of items with another array, irrelevant of position (sorting), using a comparator function.
 
@@ -155,11 +155,11 @@ Indicates whether an array contains the same set of items with another array, ir
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
-import { isSameValueSetBy } from 'array-fp-utils';
+import { isSameValueSetWith } from 'array-fp-utils';
 
 pipe(
   [{ key: 1 }, { key: 2 }, { key: 3 }],
-  isSameValueSet([3, 2, 1], (value, otherValue) => value.key === otherValue)
+  isSameValueSetWith([3, 2, 1], (value, otherValue) => value.key === otherValue)
 ); // returns true
 ```
 

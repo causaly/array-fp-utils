@@ -7,3 +7,4 @@ export { isSubsetOfWith } from './isSubsetOfWith';
 export { unique } from './unique';
 export { uniqueBy } from './uniqueBy';
 export { isSameValueSet } from './isSameValueSet';
+export { isSameValueSetWith } from './isSameValueSetWith';
