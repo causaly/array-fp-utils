@@ -1,6 +1,8 @@
+import { Primitive } from '../types';
+
 export const isSubsetOf =
-  <ValueType>(otherArr: Readonly<Array<ValueType>>) =>
-  (arr: Readonly<Array<ValueType>>): boolean => {
+  (otherArr: Readonly<Array<Primitive>>) =>
+  (arr: Readonly<Array<Primitive>>): boolean => {
     const set = new Set(otherArr);
     return arr.every((item) => set.has(item));
   };
