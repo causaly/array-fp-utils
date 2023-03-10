@@ -27,7 +27,7 @@ npm install array-fp-utils
 - [intersectWith](#intersectwith)
 - [isDistinctArray](#isdistinctarray)
 - [isSameValueSet](#issamevalueset)
-- [isSameValueSetWith](#issamevaluesetith)
+- [isSameValueSetWith](#issamevaluesewith)
 - [isSubsetOf](#issubsetof)
 - [isSubsetOfWith](#issubsetofwith)
 - [unique](#unique)
