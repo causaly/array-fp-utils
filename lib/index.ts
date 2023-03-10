@@ -6,4 +6,4 @@ export { isSubsetOf } from './isSubsetOf';
 export { isSubsetOfWith } from './isSubsetOfWith';
 export { unique } from './unique';
 export { uniqueBy } from './uniqueBy';
-export { isEqualSet } from './isEqualSet';
+export { isSameValueSet } from './isSameValueSet';
