@@ -1,5 +1,15 @@
 # array-fp-utils
 
+## 0.3.0
+
+### Minor Changes
+
+- c8e3e4a: Add isSameValueSet() function to determine whether an array contains the same set of values with another array.
+
+### Patch Changes
+
+- abc7ad7: Contraint functions use Set internally to primitive types only.
+
 ## 0.2.0
 
 ### Minor Changes
