@@ -26,7 +26,8 @@ npm install array-fp-utils
 - [intersect](#intersect)
 - [intersectWith](#intersectwith)
 - [isDistinctArray](#isdistinctarray)
-- [isEqualSet](#isequalset)
+- [isSameValueSet](#issamevalueset)
+- [isSameValueSetBy](#issamevaluesetby)
 - [isSubsetOf](#issubsetof)
 - [isSubsetOfWith](#issubsetofwith)
 - [unique](#unique)
@@ -128,9 +129,9 @@ pipe([1, 2, 3], isDistinctArray); // returns true
 pipe([1, 1, 2, 3], isDistinctArray); // returns false
 ```
 
-### isEqualSet
+### isSameValueSet
 
-Indicates whether an array contains the same set of items with another array, irrelevant of position (sorting) or repetition (duplicate items).
+Indicates whether an array contains the same set of items with another array, irrelevant of position (sorting).
 
 Note: only accepts arrays of [primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) values.
 
@@ -138,12 +139,28 @@ Note: only accepts arrays of [primitive](https://developer.mozilla.org/en-US/doc
 
 ```typescript
 import { pipe } from 'fp-ts/lib/function';
-import { isEqualSet } from 'array-fp-utils';
+import { isSameValueSet } from 'array-fp-utils';
 
-pipe([1, 2, 3], isEqualSet([3, 3, 3, 2, 2, 1])); // returns true
+pipe([1, 2, 3], isSameValueSet([3, 2, 1])); // returns true
 
-pipe([1, 2], isEqualSet([1, 2, 3])); // returns false
-pipe([1, 2, 3], isEqualSet([1, 2, 4])); // returns false
+pipe([1, 2], isSameValueSet([1, 2, 3])); // returns false
+pipe([1, 2, 3], isSameValueSet([1, 2, 4])); // returns false
+```
+
+### isSameValueSetBy
+
+Indicates whether an array contains the same set of items with another array, irrelevant of position (sorting), using a comparator function.
+
+#### Example
+
+```typescript
+import { pipe } from 'fp-ts/lib/function';
+import { isSameValueSetBy } from 'array-fp-utils';
+
+pipe(
+  [{ key: 1 }, { key: 2 }, { key: 3 }],
+  isSameValueSet([3, 2, 1], (value, otherValue) => value.key === otherValue)
+); // returns true
 ```
 
 ### isSubsetOf
