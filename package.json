@@ -37,15 +37,15 @@
     "access": "public"
   },
   "sideEffects": false,
-  "types": "./dist/index.d.ts",
-  "main": "./dist/node/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/cjs/index.js",
   "exports": {
     ".": {
       "node": {
-        "import": "./dist/node/esm/index.js",
-        "require": "./dist/node/cjs/index.js"
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js"
       },
-      "default": "./dist/browser/esm/index.js"
+      "default": "./dist/esm/index.js"
     }
   },
   "files": [
