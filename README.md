@@ -18,7 +18,7 @@ npm install array-fp-utils
 
 #### Requirements
 
-- Node.js v.14+
+- Node.js v.16+
 
 ## API
 
