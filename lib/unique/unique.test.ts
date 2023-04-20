@@ -1,5 +1,3 @@
-import { pipe } from 'fp-ts/lib/function';
-
 import { unique } from './unique';
 
 const mockData = [
@@ -17,7 +15,7 @@ const mockData = [
 
 describe('unique()', () => {
   it('returns unique values', () => {
-    const expected = pipe(mockData, unique);
+    const expected = unique(mockData);
 
     expect(expected).toMatchInlineSnapshot(`
       [
