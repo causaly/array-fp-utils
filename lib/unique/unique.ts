@@ -9,11 +9,11 @@ export function unique<ValueType extends Primitive>(
 ): NonEmptyArrayAlt<ValueType>;
 
 export function unique<ValueType extends Primitive>(
-  arr: Readonly<Array<ValueType>>
+  arr: ReadonlyArray<ValueType>
 ): Array<ValueType>;
 
 export function unique<ValueType extends Primitive>(
-  arr: Readonly<Array<ValueType>>
+  arr: ReadonlyArray<ValueType>
 ) {
   return Array.from(new Set(arr));
 }
