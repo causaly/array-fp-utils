@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.3.2
+
+### Patch Changes
+
+- ff172eb: Fix invalid reference in package.json
+
 ## 0.3.1
 
 ### Patch Changes
