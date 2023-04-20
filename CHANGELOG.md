@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.3.1
+
+### Patch Changes
+
+- 8c9b691: When a NonEmptyArray is being passed to unique() the output will always be a NonEmptyArray.
+
 ## 0.3.0
 
 ### Minor Changes
