@@ -1,6 +1,6 @@
 {
   "name": "array-fp-utils",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Array utilities for functional programming in TypeScript.",
   "keywords": [
     "fp-ts",
