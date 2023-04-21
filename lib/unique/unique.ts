@@ -1,19 +1,10 @@
 import { NonEmptyArray, NonEmptyArrayAlt, Primitive } from '../types';
 
-export function unique<ValueType extends Primitive>(
-  arr: Readonly<NonEmptyArray<ValueType>>
-): NonEmptyArray<ValueType>;
-
-export function unique<ValueType extends Primitive>(
-  arr: Readonly<NonEmptyArrayAlt<ValueType>>
-): NonEmptyArrayAlt<ValueType>;
-
-export function unique<ValueType extends Primitive>(
-  arr: ReadonlyArray<ValueType>
-): Array<ValueType>;
-
-export function unique<ValueType extends Primitive>(
-  arr: ReadonlyArray<ValueType>
-) {
-  return Array.from(new Set(arr));
+export function unique<
+  T extends
+    | ReadonlyArray<Primitive>
+    | Readonly<NonEmptyArray<Primitive>>
+    | Readonly<NonEmptyArrayAlt<Primitive>>
+>(arr: T): T {
+  return Array.from(new Set(arr)) as T;
 }
