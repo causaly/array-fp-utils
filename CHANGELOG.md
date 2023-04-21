@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.3.4
+
+### Patch Changes
+
+- 7a04cce: Ensure unique works successfully with fp-ts pipe
+
 ## 0.3.3
 
 ### Patch Changes
