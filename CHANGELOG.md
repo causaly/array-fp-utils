@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.3.3
+
+### Patch Changes
+
+- 4f2d7c3: Fix issue with build pipeline emitting only ts declarations
+
 ## 0.3.2
 
 ### Patch Changes
