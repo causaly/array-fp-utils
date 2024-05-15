@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.4.0
+
+### Minor Changes
+
+- ebd06a7: Add a types section on the exports section of package.json file
+
 ## 0.3.4
 
 ### Patch Changes
