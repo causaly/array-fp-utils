@@ -45,7 +45,8 @@
         "import": "./dist/esm/index.js",
         "require": "./dist/cjs/index.js"
       },
-      "default": "./dist/esm/index.js"
+      "default": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
     }
   },
   "files": [
