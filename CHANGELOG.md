@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.5.0
+
+### Minor Changes
+
+- 99751c1: When a NonEmptyArray is being passed to uniqueBy() the output will always be a NonEmptyArray
+
 ## 0.4.0
 
 ### Minor Changes
