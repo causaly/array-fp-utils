@@ -1,7 +1,7 @@
 export type NonEmptyArray<T> = [T, ...T[]];
 
-export type NonEmptyArrayAlt<A> = Array<A> & {
-  0: A;
+export type NonEmptyArrayAlt<T> = Array<T> & {
+  0: T;
 };
 
 export type Primitive =

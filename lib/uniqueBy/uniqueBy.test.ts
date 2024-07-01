@@ -1,5 +1,7 @@
-import { pipe } from 'fp-ts/lib/function';
+import { identity, pipe } from 'fp-ts/lib/function';
+import { expectType } from 'ts-expect';
 
+import { NonEmptyArray, NonEmptyArrayAlt } from '../types';
 import { uniqueBy } from './uniqueBy';
 
 const mockData = [
@@ -123,6 +125,81 @@ describe('uniqueBy()', () => {
           "country": "United States",
           "id": 4,
           "revenue": 181211002,
+        },
+        {
+          "company": "Dynava",
+          "country": "United Kingdom",
+          "id": 5,
+          "revenue": 42858525,
+        },
+      ]
+    `);
+  });
+
+  it('accepts empty array as input', () => {
+    const expected = pipe([], uniqueBy(identity));
+
+    expectType<Array<never>>(expected);
+    expect(expected).toEqual([]);
+  });
+
+  it('accepts NonEmptyArray as input', () => {
+    type T = NonEmptyArray<typeof mockData[number]>;
+
+    const expected = pipe(
+      mockData as T,
+      uniqueBy((item) => item.country)
+    );
+
+    expectType<T>(expected);
+
+    expect(expected).toMatchInlineSnapshot(`
+      [
+        {
+          "company": "Flashset",
+          "country": "Greece",
+          "id": 1,
+          "revenue": 48401958,
+        },
+        {
+          "company": "Tagtune",
+          "country": "United States",
+          "id": 4,
+          "revenue": 64066240,
+        },
+        {
+          "company": "Dynava",
+          "country": "United Kingdom",
+          "id": 5,
+          "revenue": 42858525,
+        },
+      ]
+    `);
+  });
+
+  it('accepts NonEmptyArrayAlt as input', () => {
+    type T = NonEmptyArrayAlt<typeof mockData[number]>;
+
+    const expected = pipe(
+      mockData as T,
+      uniqueBy((item) => item.country)
+    );
+
+    expectType<T>(expected);
+
+    expect(expected).toMatchInlineSnapshot(`
+      [
+        {
+          "company": "Flashset",
+          "country": "Greece",
+          "id": 1,
+          "revenue": 48401958,
+        },
+        {
+          "company": "Tagtune",
+          "country": "United States",
+          "id": 4,
+          "revenue": 64066240,
         },
         {
           "company": "Dynava",
