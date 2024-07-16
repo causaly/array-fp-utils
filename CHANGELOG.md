@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.6.0
+
+### Minor Changes
+
+- b993706: Force update of vulnerable transitive dependencies to resolve security issues
+
 ## 0.5.0
 
 ### Minor Changes
