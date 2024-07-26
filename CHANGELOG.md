@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.6.1
+
+### Patch Changes
+
+- 8f6cb22: Test changeset release
+
 ## 0.6.0
 
 ### Minor Changes
