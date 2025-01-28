@@ -37,8 +37,8 @@
     "access": "public"
   },
   "sideEffects": false,
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/cjs/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
