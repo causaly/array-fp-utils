@@ -1,5 +1,11 @@
 # array-fp-utils
 
+## 0.7.0
+
+### Minor Changes
+
+- 809aa1b: Use tsup for bundling
+
 ## 0.6.1
 
 ### Patch Changes
