@@ -29,13 +29,13 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: npm-cache
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: '**/build'
           key: ${{ runner.os }}-build-${{ github.sha }}
@@ -58,13 +58,13 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: npm-cache
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: '**/build'
           key: ${{ runner.os }}-build-${{ github.sha }}
